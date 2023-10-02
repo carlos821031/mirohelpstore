@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('name')->comment('Nombre del empleado');
+            $table->string('fullname')->comment('Nombre completo del empleado');
+            $table->string('ci')->comment('ID del carnet identidad o pasaporte del empleado');
             $table->string('email')->unique()->nullable()->comment('email');
             $table->string('phone')->nullable()->comment('Telefono');            
             $table->decimal('salary', 8, 2)->nullable()->comment('salario');
