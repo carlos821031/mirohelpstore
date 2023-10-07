@@ -31,7 +31,8 @@ return new class extends Migration
                 ->constrained()
                 ->comment('Foranea a user. Operador que registro el movimiento');            
             $table->integer('stock_before')->comment('Existencia del producto en la ubicacion. Antes del movimiento');            
-            $table->integer('stock_warehouse')->comment('Cantidad de productos entrados');            
+            $table->integer('stock_warehouse')->default(0)->comment('Cantidad de productos entrados');            
+            $table->integer('stock_out')->default(0)->comment('Cantidad de productos salidos, por ventas y otras razones');            
             $table->integer('stock_total')->comment('Cantidad de productos despues del movimiento');            
             $table->decimal('price', 8, 2)->default(0)->comment('Costo unitario');
             $table->decimal('price_total_mov', 8, 2)->default(0)->comment('Costo total del mov');
