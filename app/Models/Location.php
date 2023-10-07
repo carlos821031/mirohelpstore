@@ -20,6 +20,7 @@ class Location extends Model
         'address',
         'description',
         'code',
+        'shop',
         'latitude',
         'longitude',
     ];
