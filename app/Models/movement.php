@@ -13,6 +13,7 @@ class movement extends Model
     
     protected $fillable = [
         'date_mov', 
+        'daytime', 
         'type_mov', 
         'product_id', 
         'location_id', 

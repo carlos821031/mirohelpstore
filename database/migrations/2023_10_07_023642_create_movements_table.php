@@ -16,6 +16,7 @@ return new class extends Migration
             $table->date('date_mov')
                 ->comment('Fecha de la operacion.')
                 ->index()->format('d/m/Y');
+            $table->boolean('daytime')->default('1');
             $table->string('type_mov')->comment('Tipo de movimientos entrada, salida, interno, devolucion');
             $table->foreignId('product_id')
                 ->constrained()

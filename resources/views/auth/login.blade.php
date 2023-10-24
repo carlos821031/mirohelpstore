@@ -15,6 +15,10 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
+            <div class="my-4">
+                <x-label class="text-stone-950" for="Nota" value="{{ __('= Sistema para inventario adaptado a solicitud de Mikel. =') }}" />
+            </div>
+
             <div>
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
